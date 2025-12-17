@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stock_trader/core/routes/app_pages.dart';
-import 'package:stock_trader/core/routes/app_routes.dart';
-import 'package:stock_trader/core/themes/app_theme.dart';
-import 'package:stock_trader/core/translations/app_translations.dart';
+import 'core/routes/app_pages.dart';
+import 'core/routes/app_routes.dart';
+import 'core/themes/app_theme.dart';
+import 'core/translations/app_translations.dart';
+import 'views/not_found/not_found_view.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
@@ -17,15 +18,22 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Stock Trader',
-      initialRoute: AppRoutes.splash,
+      initialRoute: AppRoutes.onboarding,
       getPages: AppPages.pages,
-        // initialBinding: ,
+      // initialBinding: ,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
-      themeMode: ThemeMode.system,
       translations: AppTranslations(),
-      locale: const Locale('en','US'),
+      locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
+
+      defaultTransition: Transition.cupertino,
+      transitionDuration: const Duration(milliseconds: 250),
+
+      unknownRoute: GetPage(
+        name: AppRoutes.notFound,
+        page: () => const NotFoundView(),
+      ),
     );
   }
 }

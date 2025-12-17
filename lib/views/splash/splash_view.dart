@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stock_trader/core/constants/icon_constant.dart';
+import 'package:get/get.dart';
+import '../../core/constants/icon_constant.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
@@ -9,8 +10,20 @@ class SplashView extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 10,
           children: [
-            Image.asset(IconConstant.singleAppIcon)
+            SizedBox(
+              height: 32,
+              child: Image.asset(
+                IconConstant.singleAppIcon,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            Text(
+              'app_name'.tr,
+              style: Theme.of(context).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold),
+            )
           ],
         ),
       ),

@@ -1,12 +1,22 @@
 import 'package:get/get.dart';
-import 'package:stock_trader/core/routes/app_routes.dart';
-import 'package:stock_trader/views/splash/splash_view.dart';
+import 'app_routes.dart';
+import '../../views/not_found/not_found_view.dart';
+import '../../views/onboarding/onboarding_view.dart';
+import '../../views/splash/splash_view.dart';
 
 class AppPages {
   static final pages = <GetPage>[
     GetPage(
       name: AppRoutes.splash,
-      page: () => SplashView(),
+      page: () => const SplashView(),
+    ),
+    GetPage(
+      name: AppRoutes.notFound,
+      page: () => const NotFoundView(),
+    ),
+    GetPage(
+      name: AppRoutes.onboarding,
+      page: () => const OnboardingView(),
     )
   ];
 }

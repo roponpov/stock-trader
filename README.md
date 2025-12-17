@@ -112,7 +112,7 @@ A new Flutter project.
         ```
         flutter build appbundle --release
         ```
-8. To Generate gen-l10n
+7. To Generate gen-l10n
     ```
     flutter gen-l10n
     ```
