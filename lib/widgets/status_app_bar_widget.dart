@@ -2,33 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class StatusAppBarWidget extends StatelessWidget {
-  final Color? color;
-  final Widget? child;
+  final Color color;
+  final Widget child;
   final Brightness brightness;
 
   const StatusAppBarWidget({
-    this.color,
-    this.child,
     super.key,
+    required this.child,
+    this.color = Colors.transparent,
     this.brightness = Brightness.dark,
   });
 
   @override
   Widget build(BuildContext context) {
-    // bool isDark = (Theme.of(context) == Brightness.dark)
-    //     ? Colors.white
-    //     : Colors.transparent;
-    final androidIconBrightness =
+    final iconBrightness =
     brightness == Brightness.dark ? Brightness.light : Brightness.dark;
 
-    Theme.of(context).brightness == Brightness.dark;
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
         statusBarColor: color,
-        statusBarIconBrightness: androidIconBrightness,
-        statusBarBrightness: brightness,
+        statusBarIconBrightness: iconBrightness, // Android icons
+        statusBarBrightness: brightness, // iOS
       ),
-      child: child!,
+      child: child,
     );
   }
 }

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Stock Trader',
-      initialRoute: AppRoutes.splash,
+      initialRoute: AppRoutes.signUp,
       getPages: AppPages.pages,
       // initialBinding: ,
       theme: AppTheme.light,
