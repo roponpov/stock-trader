@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/constants/icon_constant.dart';
 
 class SocialLoginButtonWidget extends StatelessWidget{
   final ThemeData theme;

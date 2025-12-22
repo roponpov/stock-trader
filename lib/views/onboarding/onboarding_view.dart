@@ -27,7 +27,6 @@ class OnboardingView extends StatelessWidget {
     final Size size = MediaQuery.sizeOf(context);
 
     return StatusAppBarWidget(
-      color: Colors.transparent,
       brightness: Brightness.light,
       child: Scaffold(
         body: SafeArea(

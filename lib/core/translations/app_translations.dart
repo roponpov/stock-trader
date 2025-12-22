@@ -28,6 +28,10 @@ class AppTranslations extends Translations {
       'enter_a_valid_email' : 'Enter a valid email',
       'password_is_required' : 'Password is required',
       'min_8_characters' : 'Min 8 characters',
+      'hi_there' : 'Hi there!',
+      'welcome_back_sign_in_to_your_account' : 'Welcome back, Sign in to your account',
+      'forgot_password' : 'Forgot password?',
+      'do_not_have_an_account' : "Don't have an account?",
     },
     'km_KH' : {
       'app_name' : 'Stock Trader',
@@ -54,6 +58,10 @@ class AppTranslations extends Translations {
       'enter_a_valid_email' : 'សូមបញ្ចូលអ៊ីមែលឱ្យបានត្រឹមត្រូវ',
       'password_is_required' : 'សូមបញ្ជាក់លេខសម្ងាត់',
       'min_8_characters' : 'យ៉ាងហោចណាស់ ៨ តួអក្សរ',
+      'hi_there' : 'សួស្ដី!',
+      'welcome_back_sign_in_to_your_account' : 'សូមស្វាគមន៍មកវិញ សូមចូលទៅកាន់គណនីរបស់អ្នក',
+      'forgot_password' : 'ភ្លេចពាក្យសម្ងាត់មែនទេ?',
+      'do_not_have_an_account' : 'មិនទាន់មានគណនីមែនទេ?',
     },
   };
 }
