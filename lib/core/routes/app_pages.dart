@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import '../../views/login/phone_number_verification_view.dart';
 import '../../views/login/sign_in_view.dart';
 import '../../views/login/sign_up_view.dart';
+import '../bindings/phone_number_verification_binding.dart';
 import '../bindings/sign_in_binding.dart';
 import '../bindings/sign_up_binding.dart';
 import 'app_routes.dart';
@@ -36,6 +37,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.phoneNumberVerification,
       page: () => const PhoneNumberVerificationView(),
+      binding: PhoneNumberVerificationBinding(),
     )
   ];
 }

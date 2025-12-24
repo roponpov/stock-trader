@@ -1,0 +1,22 @@
+import 'package:flutter/services.dart';
+
+class PhoneNumberFormatterUtil extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    final text = newValue.text.replaceAll(' ', '');
+    final buffer = StringBuffer();
+
+    for (int i = 0; i < text.length; i++) {
+      buffer.write(text[i]);
+      if ((i + 1) % 3 == 0 && (i + 1) != text.length) {
+        buffer.write(' ');
+      }
+    }
+
+    final string = buffer.toString();
+    return newValue.copyWith(
+      text: string,
+      selection: TextSelection.collapsed(offset: string.length),
+    );
+  }
+}
