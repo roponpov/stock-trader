@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../../core/constants/icon_constant.dart';
+import 'show_country_picker.dart';
 import '../../utils/phone_number_formatter_util.dart';
 import '../../viewmodels/phone_number_verification_view_model.dart';
 import '../../widgets/status_app_bar_widget.dart';
-import 'show_country_picker.dart';
 
 class PhoneNumberVerificationView extends GetView<PhoneNumberVerificationViewModel> {
   const PhoneNumberVerificationView({super.key});
@@ -47,7 +46,7 @@ class PhoneNumberVerificationView extends GetView<PhoneNumberVerificationViewMod
               Padding(
                 padding: const EdgeInsets.only(left: 16, bottom: 12),
                 child: Text(
-                  'Enter your phone number',
+                  'enter_your_phone_number'.tr,
                   style: theme.textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
@@ -58,7 +57,7 @@ class PhoneNumberVerificationView extends GetView<PhoneNumberVerificationViewMod
                 child: SizedBox(
                   width: size.width / 1.5,
                   child: Text(
-                    "You'll receive a 4 digit code for the phone number verification".tr,
+                    'you_receive_a_4_digit_code_for_the_phone_number_verification'.tr,
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: theme.colorScheme.onSurface.withValues(alpha: 0.8)
                     ),
@@ -140,7 +139,7 @@ class PhoneNumberVerificationView extends GetView<PhoneNumberVerificationViewMod
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             contentPadding: const EdgeInsets.only(left: 10),
-                            hintText: 'Enter your phone number',
+                            hintText: 'enter_your_phone_number'.tr,
                             hintStyle: theme.textTheme.labelLarge?.copyWith(
                               color: theme.colorScheme.outline
                             )
@@ -164,7 +163,13 @@ class PhoneNumberVerificationView extends GetView<PhoneNumberVerificationViewMod
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                     ),
                     onPressed: () {},
-                    child: const Text('Send code'),
+                    child: Text(
+                      'send_code'.tr,
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        color: theme.colorScheme.onPrimary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
               ),
